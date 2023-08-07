@@ -13,19 +13,25 @@ export const App = () => {
   const options = Object.keys({good, neutral, bad});
 
   const onLeaveFeedback = (feedbackName) => {
-   // eslint-disable-next-line
+  //eslint ругался на отсутствие дефолтного кейса, 
+  //не вчиталась сразу и решила вствить стоку с eslint, 
+  //как рекомендовал сам eslint, чтобы он перестал ругаться)))))
+  //исправила. После проверки дз уберу это сообщение отсюда, спасибо)
    switch (feedbackName) {
-     case 'good':
-       setGood(prevState => prevState + 1);
-       break;
+    case 'good':
+      setGood(prevState => prevState + 1);
+      break;
      
-     case 'neutral':
-       setNeutral(prevState => prevState + 1);
-       break;
+    case 'neutral':
+      setNeutral(prevState => prevState + 1);
+      break;
      
-     case 'bad':
-       setBed(prevState => prevState + 1);
-       break;
+    case 'bad':
+      setBed(prevState => prevState + 1);
+      break;
+
+    default:
+      return;
    }
  }
  
